@@ -1,0 +1,41 @@
+@reference "../globals.css";
+
+.shell {
+  @apply flex min-h-screen flex-col bg-[#f7fbfc] text-[#0f2f44] md:flex-row;
+}
+
+.sidebar {
+  @apply flex border-b border-[#d7e8ee] bg-white px-6 py-5 md:min-h-screen md:w-72 md:flex-col md:border-b-0 md:border-r md:px-8 md:py-8;
+}
+
+.brand {
+  @apply text-2xl font-semibold text-[#087d92];
+}
+
+.userBlock {
+  @apply mt-6 rounded-lg bg-[#e8f8fa] p-4 md:mt-auto;
+}
+
+.userLabel {
+  @apply text-sm font-medium text-[#536b7a];
+}
+
+.userEmail {
+  @apply mt-1 break-all text-base font-semibold text-[#082338];
+}
+
+.content {
+  @apply flex flex-1 px-6 py-10 sm:px-8 md:items-start md:px-12 md:py-12;
+}
+
+.welcome {
+  @apply max-w-2xl;
+}
+
+.title {
+  @apply text-4xl font-semibold text-[#082338];
+}
+
+.description {
+  @apply mt-4 text-lg leading-8 text-[#536b7a];
+}

@@ -1,0 +1,137 @@
+@reference "./globals.css";
+
+.page {
+  @apply min-h-screen bg-[#f7fbfc] text-[#0f2f44];
+}
+
+.hero {
+  @apply mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-10 sm:px-8 lg:min-h-[680px] lg:flex-row lg:items-center lg:gap-16 lg:py-16;
+}
+
+.heroContent {
+  @apply flex flex-1 flex-col items-start;
+}
+
+.brand {
+  @apply mb-5 text-2xl font-semibold text-[#087d92] sm:text-3xl;
+}
+
+.heading {
+  @apply max-w-3xl text-5xl font-semibold leading-tight text-[#082338] sm:text-6xl lg:text-7xl;
+}
+
+.intro {
+  @apply mt-6 max-w-2xl text-lg leading-8 text-[#456174];
+}
+
+.button {
+  @apply mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#087d92] px-6 text-base font-semibold text-white shadow-sm transition-colors hover:bg-[#07687a] focus:outline-none focus:ring-2 focus:ring-[#087d92] focus:ring-offset-2 focus:ring-offset-[#f7fbfc];
+}
+
+.visualPanel {
+  @apply relative flex min-h-90 flex-1 items-center justify-center overflow-hidden rounded-lg bg-[#d8f4f7] p-6 shadow-sm ring-1 ring-[#b8e8ee];
+}
+
+.visualAccentOne {
+  @apply absolute left-6 top-8 h-24 w-24 rounded-lg bg-[#56c7d5];
+}
+
+.visualAccentTwo {
+  @apply absolute bottom-8 right-8 h-32 w-32 rounded-lg bg-[#9edee8];
+}
+
+.document {
+  @apply relative w-full max-w-sm rounded-lg bg-white p-6 shadow-xl ring-1 ring-[#d5eef2];
+}
+
+.documentTitleLine {
+  @apply mb-5 h-3 w-28 rounded-full bg-[#0f88a0];
+}
+
+.lineStack {
+  @apply space-y-3;
+}
+
+.documentLine {
+  @apply h-3 rounded-full bg-[#d7e8ee];
+}
+
+.documentLineShort {
+  @apply h-3 w-5/6 rounded-full bg-[#d7e8ee];
+}
+
+.note {
+  @apply mt-8 rounded-md bg-[#eef9fb] p-4;
+}
+
+.noteTitleLine {
+  @apply mb-3 h-2 w-20 rounded-full bg-[#68c8d4];
+}
+
+.noteLines {
+  @apply space-y-2;
+}
+
+.noteLine {
+  @apply h-2 rounded-full bg-[#c3e8ee];
+}
+
+.noteLineShort {
+  @apply h-2 w-4/5 rounded-full bg-[#c3e8ee];
+}
+
+.highlightsSection {
+  @apply bg-white px-6 py-16 sm:px-8;
+}
+
+.highlightsGrid {
+  @apply mx-auto grid max-w-6xl gap-5 md:grid-cols-3;
+}
+
+.card {
+  @apply rounded-lg border border-[#d7e8ee] bg-white p-6 shadow-sm;
+}
+
+.cardIcon {
+  @apply mb-5 flex h-11 w-11 items-center justify-center rounded-md bg-[#e8f8fa] text-[#087d92];
+}
+
+.cardTitle {
+  @apply text-xl font-semibold text-[#082338];
+}
+
+.cardDescription {
+  @apply mt-4 leading-7 text-[#536b7a];
+}
+
+.showcaseSection {
+  @apply px-6 py-16 sm:px-8;
+}
+
+.showcase {
+  @apply mx-auto flex max-w-6xl flex-col items-center gap-5 rounded-lg bg-[#c8f0f3] px-6 py-12 text-center sm:px-10;
+}
+
+.showcaseIcon {
+  @apply flex h-12 w-12 items-center justify-center rounded-md bg-white/70 text-[#087d92] shadow-sm;
+}
+
+.showcaseTitle {
+  @apply text-3xl font-semibold text-[#082338] sm:text-4xl;
+}
+
+.showcaseText {
+  @apply mx-auto max-w-3xl text-lg leading-8 text-[#31576a];
+}
+
+.closing {
+  @apply px-6 pb-20 text-center sm:px-8;
+}
+
+.closingTitle {
+  @apply text-3xl font-semibold text-[#082338];
+}
+
+.closingText {
+  @apply mx-auto mt-4 max-w-xl leading-7 text-[#536b7a];
+}

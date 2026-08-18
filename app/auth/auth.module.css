@@ -1,0 +1,57 @@
+@reference "../globals.css";
+
+.shell {
+  @apply flex min-h-screen items-center justify-center bg-[#f7fbfc] px-6 py-12 text-[#0f2f44];
+}
+
+.panel {
+  @apply w-full max-w-md rounded-lg border border-[#d7e8ee] bg-white p-8 shadow-sm;
+}
+
+.brand {
+  @apply mb-8 inline-flex text-2xl font-semibold text-[#087d92] transition-colors hover:text-[#07687a] focus:outline-none focus:ring-2 focus:ring-[#087d92] focus:ring-offset-2;
+}
+
+.header {
+  @apply mb-8;
+}
+
+.title {
+  @apply text-3xl font-semibold text-[#082338];
+}
+
+.subtitle {
+  @apply mt-3 leading-7 text-[#536b7a];
+}
+
+.form {
+  @apply flex flex-col gap-5;
+}
+
+.field {
+  @apply flex flex-col gap-2;
+}
+
+.label {
+  @apply text-sm font-semibold text-[#0f2f44];
+}
+
+.input {
+  @apply h-11 rounded-md border border-[#c8dce4] bg-white px-3 text-base text-[#0f2f44] outline-none transition-colors placeholder:text-[#8aa0ad] focus:border-[#087d92] focus:ring-2 focus:ring-[#b8e8ee];
+}
+
+.error {
+  @apply text-sm font-medium text-[#b42318];
+}
+
+.button {
+  @apply mt-2 inline-flex h-11 items-center justify-center rounded-md bg-[#087d92] px-5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-[#07687a] focus:outline-none focus:ring-2 focus:ring-[#087d92] focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-[#9bb8c0];
+}
+
+.footer {
+  @apply mt-6 text-center text-sm text-[#536b7a];
+}
+
+.link {
+  @apply font-semibold text-[#087d92] transition-colors hover:text-[#07687a] focus:outline-none focus:ring-2 focus:ring-[#087d92] focus:ring-offset-2;
+}
