@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { SubmitEvent, useState } from "react";
 import styles from "../auth.module.css";
+import { auth } from "@/lib/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export default function SignupPage() {
   const [email, setEmail] = useState("");
@@ -11,14 +13,23 @@ export default function SignupPage() {
   const passwordsDoNotMatch =
     confirmPassword.length > 0 && password !== confirmPassword;
 
-  function handleSubmit(event: SubmitEvent) {
+  async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
 
     if (passwordsDoNotMatch) {
       return;
     }
 
-    console.log({ email, password, confirmPassword });
+    try {
+
+     const result = await createUserWithEmailAndPassword(auth, email, password);
+     console.log("Account created successfully", result);
+
+      
+    } catch (error) {
+      console.log(error)
+    }
+   
   }
 
   return (

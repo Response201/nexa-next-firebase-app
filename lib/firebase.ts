@@ -3,6 +3,7 @@ import {
   initializeAppCheck,
   ReCaptchaEnterpriseProvider,
 } from "firebase/app-check";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBZKoeh_2CdzpCGW7cV9C80TUiHjWFK8xE",
@@ -24,4 +25,6 @@ if (typeof window !== "undefined") {
   });
 }
 
-export default app;
+
+export const auth = getAuth(app);
+
