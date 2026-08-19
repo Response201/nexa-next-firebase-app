@@ -3,14 +3,22 @@
 import Link from "next/link";
 import { SubmitEvent, useState } from "react";
 import styles from "../auth.module.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/lib/firebase";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(event: SubmitEvent) {
+  async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
-    console.log({ email, password });
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password)
+      console.log("User signed in successfully", result);
+
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
