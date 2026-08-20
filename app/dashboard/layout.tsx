@@ -14,7 +14,6 @@ export default function DashboardLayout({
 
 const handleClick = async () => {
 await signOut(auth)
-console.log("User signed out successfully");
 }
 
 

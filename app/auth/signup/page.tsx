@@ -23,9 +23,6 @@ export default function SignupPage() {
     try {
 
      const result = await createUserWithEmailAndPassword(auth, email, password);
-     console.log("Account created successfully", result);
-
-      
     } catch (error) {
       console.log(error)
     }

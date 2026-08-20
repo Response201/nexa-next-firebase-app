@@ -14,8 +14,6 @@ export default function LoginPage() {
     event.preventDefault();
     try {
       const result = await signInWithEmailAndPassword(auth, email, password)
-      console.log("User signed in successfully", result);
-
     } catch (error) {
       console.log(error)
     }
