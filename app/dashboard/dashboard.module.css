@@ -39,3 +39,50 @@
 .description {
   @apply mt-4 text-lg leading-8 text-[#536b7a];
 }
+
+/* Dashboard two-column layout */
+.columns {
+  @apply flex w-full gap-8;
+}
+
+.leftPanel {
+  @apply flex-1;
+}
+
+.rightPanel {
+  @apply w-96 shrink-0;
+}
+
+/* NewNote form */
+.newNote {
+  @apply rounded-xl border border-[#d7e8ee] bg-white p-6 shadow-sm;
+}
+
+.newNoteTitle {
+  @apply mb-5 text-xl font-semibold text-[#082338];
+}
+
+.form {
+  @apply flex flex-col gap-4;
+}
+
+.field {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-sm font-medium text-[#536b7a];
+}
+
+.input,
+.select {
+  @apply rounded-lg border border-[#d7e8ee] bg-[#f7fbfc] px-3 py-2 text-sm text-[#0f2f44] outline-none transition focus:border-[#087d92] focus:ring-2 focus:ring-[#087d92]/20;
+}
+
+.textarea {
+  @apply resize-none rounded-lg border border-[#d7e8ee] bg-[#f7fbfc] px-3 py-2 text-sm text-[#0f2f44] outline-none transition focus:border-[#087d92] focus:ring-2 focus:ring-[#087d92]/20;
+}
+
+.submitButton {
+  @apply mt-1 cursor-pointer rounded-lg bg-[#087d92] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#065f6f] active:scale-95;
+}
