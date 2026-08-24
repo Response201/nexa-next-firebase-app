@@ -4,6 +4,7 @@ import {
   ReCaptchaEnterpriseProvider,
 } from "firebase/app-check";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBZKoeh_2CdzpCGW7cV9C80TUiHjWFK8xE",
@@ -27,4 +28,4 @@ if (typeof window !== "undefined") {
 
 
 export const auth = getAuth(app);
-
+export const db = getFirestore(app);
