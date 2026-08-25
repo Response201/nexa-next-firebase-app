@@ -86,3 +86,20 @@
 .submitButton {
   @apply mt-1 cursor-pointer rounded-lg bg-[#087d92] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#065f6f] active:scale-95;
 }
+
+/* NoteList */
+.noteList {
+  @apply flex flex-col gap-4;
+}
+
+.noteCard {
+  @apply rounded-sm border border-[#e8e4de] bg-[#fefefc] px-6 py-5 shadow-[1px_2px_5px_rgba(0,0,0,0.06),_inset_0_-1px_0_#e4dfd8];
+}
+
+.noteCardTitle {
+  @apply mb-2 text-base font-semibold text-[#082338];
+}
+
+.noteCardContent {
+  @apply text-sm leading-6 text-[#4a5568];
+}
