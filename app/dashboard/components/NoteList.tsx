@@ -3,7 +3,7 @@
 import styles from "../dashboard.module.css";
 import { useEffect, useState } from "react";
 import { db } from "@/lib/firebase";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { addDoc, collection, getDocs, onSnapshot } from "firebase/firestore";
 import { title } from "process";
 
 interface NoteData {
@@ -19,9 +19,7 @@ export default function NoteList() {
 	const [notes, setNotes] = useState<Note[]>([]);
 
 	useEffect(() => {
-		const fetchNotes = async () => {
-			const snapshot = await getDocs(collection(db, "notes"));
-
+		const unsub = onSnapshot(collection(db, "notes"), (snapshot) => {
 			const documents = snapshot.docs.map((doc) => {
 				return {
 					id: doc.id,
@@ -30,14 +28,9 @@ export default function NoteList() {
 			});
 
 			setNotes(documents);
+		});
 
-			try {
-			} catch (error) {
-				console.log(error);
-			}
-		};
-
-		fetchNotes();
+		return unsub;
 	}, []);
 
 	return (
