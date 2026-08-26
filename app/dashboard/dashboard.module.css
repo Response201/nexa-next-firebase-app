@@ -100,6 +100,14 @@
   @apply mb-2 text-base font-semibold text-[#082338];
 }
 
+.noteCardFooter {
+  @apply mt-3 flex justify-end;
+}
+
+.deleteButton {
+  @apply cursor-pointer text-[#a0aab4] transition hover:text-red-400;
+}
+
 .noteCardContent {
   @apply text-sm leading-6 text-[#4a5568];
 }
