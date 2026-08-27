@@ -3,9 +3,10 @@
 import styles from "../dashboard.module.css";
 import { useEffect, useState } from "react";
 import { db } from "@/lib/firebase";
-import { addDoc, collection, deleteDoc, doc, getDocs, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs, onSnapshot, query, where } from "firebase/firestore";
 import { title } from "process";
 import { Trash2 } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
 
 interface NoteData {
 	title: string;
@@ -18,9 +19,11 @@ interface Note extends NoteData {
 
 export default function NoteList() {
 	const [notes, setNotes] = useState<Note[]>([]);
-
+ const {user} = useAuth()
 	useEffect(() => {
-		const unsub = onSnapshot(collection(db, "notes"), (snapshot) => {
+		// Filter out notes that belong to the current user
+		const q = query(collection( db, "notes"), where("uid","==", user?.uid))
+		const unsub = onSnapshot(q, (snapshot) => {
 			const documents = snapshot.docs.map((doc) => {
 				return {
 					id: doc.id,
