@@ -21,7 +21,7 @@ export default function NoteList() {
 	const [notes, setNotes] = useState<Note[]>([]);
  const {user} = useAuth()
 	useEffect(() => {
-		// Filter out notes that belong to the current user
+		// Filter out notes that belong to the current user and match Firestore rules
 		const q = query(collection( db, "notes"), where("uid","==", user?.uid))
 		const unsub = onSnapshot(q, (snapshot) => {
 			const documents = snapshot.docs.map((doc) => {
