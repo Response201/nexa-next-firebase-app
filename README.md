@@ -1,7 +1,5 @@
 # Firebase Crash Course - Net Ninja
 
-A Firebase application built while following the **Firebase Crash Course by Net Ninja**.
-
 ## Live Demo
 
 [Nexa Next Firebase App](https://nexa-next-firebase-app.vercel.app/)
